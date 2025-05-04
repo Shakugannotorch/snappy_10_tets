@@ -4,9 +4,9 @@ import snappy_manifolds
 
 # This module uses sqlite3 databases with multiple tables.
 # The path to the database file is specified at the module level.
-# from .sqlite_files import __path__ as manifolds_paths
-#manifolds_path = manifolds_paths[0]
-database_path = '/Users/shana/Documents/Projects/snappy_10_tets/manifold_src/10_tet.sqlite'
+from .sqlite_files import __path__ as manifolds_paths
+manifolds_path = manifolds_paths[0]
+database_path = os.path.join(manifolds_path, '10_tet.sqlite')
 
 split_filling_info = re.compile(r'(.*?)((?:\([0-9 .+-]+,[0-9 .+-]+\))*$)')
 
@@ -33,7 +33,7 @@ def get_tables(ManifoldTable):
         number.
         """
 
-        _regex = re.compile(r'[KL][0-9]+[an]([0-9]+)$')
+        _regex = re.compile(r'([msvt])([0-9]+)$|o9_\d\d\d\d\d$|o10_\d\d\d\d\d\d$')
         
         def __init__(self, **kwargs):
             return ManifoldTable.__init__(self,

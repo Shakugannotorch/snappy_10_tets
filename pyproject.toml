@@ -1,0 +1,31 @@
+[build-system]
+requires = [
+    "setuptools>=59",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "snappy_10_tets"
+description = "Database of cusped hyperbolic manifolds triangulizable by <= 10 tetrahedra"
+authors = [
+    {name = "Shana Li", email = "yl202@illinois.edu"}
+]
+readme = "README.rst"
+license = {text = "GPLv2+"}
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: GNU General Public License v2 or later (GPLv2+)",
+    "Operating System :: OS Independent",
+    "Programming Language :: C",
+    "Programming Language :: Cython",
+    "Programming Language :: Python",
+    "Topic :: Scientific/Engineering :: Mathematics",
+]
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/Shakugannotorch/snappy_10_tets"
+
+[tool.setuptools.dynamic]
+version = {attr = "snappy_10_tets.__version__"}
