@@ -15,7 +15,8 @@ The module need to be imported along with SnapPy, i.e.::
 
   sage: import snappy, snappy_10_tets
 
-After being imported, the extended census can be accessed via SnapPy's :code:`Manifold` class. For example::
+After being imported, the extended census can be accessed via SnapPy's :code:`Manifold` class. 
+For example::
   sage: m = snappy.Manifold('o10_140311(1, 0)')
 
   sage: m.triangulation_isosig()
