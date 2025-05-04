@@ -17,7 +17,9 @@ The module need to be imported along with SnapPy, i.e.::
 
 After being imported, the extended census can be accessed via SnapPy's :code:`Manifold` class, e.g.::
   sage: m = snappy.Manifold('o10_140311(1, 0)')
+
   sage: m.triangulation_isosig()
+  
   'kLLPLPAkcdefhihgijjhsutktfkekn_bBba(1,0)'
 
 The raw source for the tables are in::
