@@ -7,6 +7,19 @@ and includes the source code for the Python module
 "snappy_10_tets" which packages them up for use in SnapPy and
 Spherogram.
 
+To install the module::
+
+  sage -pip install git+https://github.com/Shakugannotorch/snappy_10_tets/
+
+The module need to be imported along with SnapPy, i.e.::
+
+  sage: import snappy, snappy_10_tets
+
+After being imported, the extended census can be accessed via SnapPy's :code:`Manifold` class, e.g.::
+  sage: m = snappy.Manifold('o10_140311(1, 0)')
+  sage: m.triangulation_isosig()
+  'kLLPLPAkcdefhihgijjhsutktfkekn_bBba(1,0)'
+
 The raw source for the tables are in::
   
   manifold_src/original_manifold_sources
