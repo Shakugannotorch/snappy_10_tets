@@ -7,7 +7,7 @@ and includes the source code for the Python module
 "snappy_10_tets" which packages them up for use in SnapPy and
 Spherogram.
 
-To install the module::
+To install the module in SageMath::
 
   sage -pip install git+https://github.com/Shakugannotorch/snappy_10_tets/
 
