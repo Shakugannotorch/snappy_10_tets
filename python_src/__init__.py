@@ -14,4 +14,4 @@ try:
         if name not in snappy.database_objects:
             snappy.database_objects.append(name)
 except ImportError:
-    raise RuntimeError('Error happened when loading 10 tet census data')
+    raise RuntimeError('Error happened when loading 10 tet census data to SnapPy')

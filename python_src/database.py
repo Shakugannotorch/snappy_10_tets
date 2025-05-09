@@ -22,15 +22,8 @@ def get_tables(ManifoldTable):
 
     class TenTetCuspedCensus(ManifoldTable):
         """ 
-        Iterator for all knots up to 14 or 15 crossings (see below for
-        which) and links up to 14 crossings as tabulated by Jim Hoste
-        and Morwen Thistlethwaite.  In addition to the filter
-        arguments supported by all ManifoldTables, this iterator
-        provides alternating=<True/False>;
-        knots_vs_links=<'knots'/'links'>; and crossings=N. These allow
-        iterations only through alternating or non-alternating links
-        with 1 or more than 1 component and a specified crossing
-        number.
+        Iterator for all orientable cusped hyperbolic manifolds that
+        can be triangulated with at most 10 ideal tetrahedra.
         """
 
         _regex = re.compile(r'([msvt])([0-9]+)$|o9_\d\d\d\d\d$|o10_\d\d\d\d\d\d$')

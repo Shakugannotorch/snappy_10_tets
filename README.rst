@@ -11,11 +11,11 @@ To install the module in SageMath::
 
   sage -pip install git+https://github.com/Shakugannotorch/snappy_10_tets/
 
-The module need to be imported along with SnapPy, i.e.::
+To use this module with SnapPy, one can do::
 
-  sage: import snappy, snappy_10_tets
+  sage: from snappy_10_tets import snappy
 
-After being imported, the extended census can be accessed via SnapPy's :code:`Manifold` class. 
+Then extended census can be accessed via SnapPy's :code:`Manifold` class. 
 For example::
   sage: m = snappy.Manifold('o10_140311(1, 0)')
   sage: m.triangulation_isosig()
