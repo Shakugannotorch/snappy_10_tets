@@ -1,10 +1,12 @@
 from __future__ import print_function
 import sys, sqlite3, re, os, random
 import snappy_manifolds
+import ast
 
 # This module uses sqlite3 databases with multiple tables.
 # The path to the database file is specified at the module level.
 from .sqlite_files import __path__ as manifolds_paths
+
 manifolds_path = manifolds_paths[0]
 database_path = os.path.join(manifolds_path, '10_tet.sqlite')
 
@@ -25,8 +27,10 @@ def get_tables(ManifoldTable):
         Iterator for all orientable cusped hyperbolic manifolds that
         can be triangulated with at most 10 ideal tetrahedra.
         """
-
+        
         _regex = re.compile(r'([msvt])([0-9]+)$|o9_\d\d\d\d\d$|o10_\d\d\d\d\d\d$')
+
+        _select = 'select name, triangulation, isometryclass from %s'
         
         def __init__(self, **kwargs):
             return ManifoldTable.__init__(self,
@@ -40,6 +44,10 @@ def get_tables(ManifoldTable):
             the ones which are specific to links.
             """
             ManifoldTable._configure(self, **kwargs)
+
+        def _finalize(self, M, row):
+            M.set_name(row[0])
+            M.isometry_class = ast.literal_eval(row[2])
 
     return [TenTetCuspedCensus()]
 
