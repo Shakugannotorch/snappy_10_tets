@@ -30,7 +30,7 @@ def get_tables(ManifoldTable):
         
         _regex = re.compile(r'([msvt])([0-9]+)$|o9_\d\d\d\d\d$|o10_\d\d\d\d\d\d$')
 
-        _select = 'select name, triangulation, isometryclass from %s'
+        _select = 'select name, triangulation, isometryclass from %s '
         
         def __init__(self, **kwargs):
             return ManifoldTable.__init__(self,
