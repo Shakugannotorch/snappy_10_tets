@@ -54,9 +54,9 @@ def make_table(connection, tablename, csv_files, name_index=True):
     insert_query += ') values ('
     for column in columns:
         if schema_types[column] == 'text':
-            insert_query += "'%s', "
+            insert_query += "?, "
         else:
-            insert_query += "%s, "
+            insert_query += "?, "
     insert_query = insert_query[:-2] #one comma too many
     insert_query += ')'
 
@@ -68,7 +68,7 @@ def make_table(connection, tablename, csv_files, name_index=True):
             for i,data in enumerate(data_list): #chernsimons is None sometimes
                 if data == 'None':
                     data_list[i] = 'Null'
-            connection.execute(insert_query%tuple(data_list))
+            connection.execute(insert_query, tuple(data_list))
 
     # We need to index columns that will be queried frequently for speed.
 
@@ -104,5 +104,5 @@ if __name__ == '__main__':
         with sqlite3.connect(manifold_db) as connection:
             for tablename, args in manifold_data.items():
                 make_table(connection, tablename, **args)
-            connection.execute(" create view hyperbolic_cusped_census_view as select * from hyperbolic_cusped_census")
+            connection.execute(" create view hyperbolic_cusped_census_view as select * from hyperbolic_cusped_census ")
 
