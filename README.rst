@@ -2,9 +2,9 @@ The 10 tetrahedra cusped census database
 ============================
 
 This repository stores the manifold database of a complete census of
-all cusped hyperbolic manifolds triangulizable by no more than 10 tetrahedra, 
+all orientable cusped hyperbolic 3-manifolds triangulizable by no more than 10 tetrahedra, 
 and includes the source code for the Python module
-"snappy_10_tets" which packages them up for use in SnapPy and
+:code:`snappy_10_tets` which packages them up for use in SnapPy and
 Spherogram.
 
 To install the module in SageMath::
