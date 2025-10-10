@@ -15,11 +15,24 @@ To use this module with SnapPy, one can do::
 
   sage: from snappy_10_tets import snappy
 
-Then extended census can be accessed via SnapPy's :code:`Manifold` class. 
+The extended census can then be accessed via SnapPy's :code:`Manifold` class. 
 For example::
   sage: m = snappy.Manifold('o10_140311(1, 0)')
   sage: m.triangulation_isosig()
   'kLLPLPAkcdefhihgijjhsutktfkekn_bBba(1,0)'
+
+For the 10-tetrahedra census, this module also stores all minimal triangulations of a given manifold,
+which can be accessed by, for example::
+  sage: m = snappy.Manifold('o10_140311')
+  sage: m.isometry_class
+  ['kLLLMzQkcdeghfhijjjhslmfnfumrk_baBb',
+ 'kLLLPzQkcdehgfhijjjhsllgncuxof_baBb',
+ 'kLLPLPAkcdefhihgijjhsutktfkekn_bBba',
+ 'kLLLvQQkcdggjfihjijhshrqnoctja_abBa',
+ 'kLLLvQQkcdegfijhijjhslonoacnmq_baBb',
+ 'kLLLLQAkcdfhhigihjjhstrsrwkrps_baab']
+
+Currently, for the census below 10-tetrahedra, :code:`m.isometry_class` exists but the list only contains the original triangulation of :code:`m`.
 
 The raw source for the tables are in::
   
