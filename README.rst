@@ -1,4 +1,4 @@
-The database for census of 10-tetrahedra orientable cusped hyperbolic 3-manifolds
+The database for 10-tetrahedra census of orientable cusped hyperbolic 3-manifolds
 ============================
 
 This repository stores the manifold database of a complete census of
