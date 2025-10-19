@@ -1,4 +1,4 @@
-The 10 tetrahedra cusped census database
+The database for census of 10-tetrahedra orientable cusped hyperbolic 3-manifolds
 ============================
 
 This repository stores the manifold database of a complete census of
@@ -35,7 +35,7 @@ For census below 10-tetrahedra, :code:`m.isometry_class` has been extracted from
 but is not perfectly compatible with SnapPy as of current, in the sense that one needs to create the manifold with :code:`snappy.TenTetCuspedCensus` instead of :code:`snappy.Manifold`, 
 otherwise an error will be raised when one tries to access :code:`m.isometry_class`. 
 Therefore the appropriate way to access it is::
-  
+
   sage: m = snappy.TenTetCuspedCensus['o9_08594']
   sage: m.isometry_class
   ['jLALLAQcbbfgfhiiihhkltxkqdm',
