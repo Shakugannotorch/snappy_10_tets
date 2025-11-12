@@ -20,16 +20,16 @@ For example::
 
   sage: m = snappy.Manifold('o10_140311(1, 0)')
   sage: m.triangulation_isosig()
-  'kLLPLPAkcdefhihgijjhsutktfkekj_baBb(1,0)'
+  'kLLLMzQkcdeghfhijjjhslmfnfumrf_bBba(1,0)'
 
 For the 10-tetrahedra census, this module also stores all minimal triangulations of a given manifold,
 which can be accessed by, for example::
 
   sage: m = snappy.Manifold('o10_140311')
   sage: m.isometry_class
-  ['kLLLMzQkcdeghfhijjjhslmfnfumrf_bBba',
- 'kLLLLQAkcdfhhigihjjhstrcrwkrps_abBa',
- 'kLLPLPAkcdefhihgijjhsutktfkekj_baBb']
+  ['kLLLMzQkcdeghfhijjjhslmfnfumrf',
+ 'kLLLLQAkcdfhhigihjjhstrcrwkrps',
+ 'kLLPLPAkcdefhihgijjhsutktfkekj']
 
 For census below 10-tetrahedra, :code:`m.isometry_class` has been extracted from the `Regina database <https://regina-normal.github.io/data.html>`_ , 
 but is not perfectly compatible with SnapPy as of current, in the sense that one needs to create the manifold with :code:`snappy.TenTetCuspedCensus` instead of :code:`snappy.Manifold`, 
