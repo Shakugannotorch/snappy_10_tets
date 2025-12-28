@@ -2,7 +2,12 @@ The database for 10-tetrahedra census of orientable cusped hyperbolic 3-manifold
 ============================
 
 This repository stores the manifold database of a complete census of
-all 150730 orientable cusped hyperbolic 3-manifolds triangulizable by no more than 10 tetrahedra, 
+all orientable cusped hyperbolic 3-manifolds whose minimal ideal triangulations consist of no more than 10 tetrahedra,
+accompanying the paper 
+
+  Shana Yunsheng Li, The complete 10-tetrahedra census of orientable cusped hyperbolic 3-manifolds `arXiv:2512.02142
+  <https://arxiv.org/abs/2512.02142>`_
+  
 and includes the source code for the Python module
 :code:`snappy_10_tets` which packages them up for use in SnapPy.
 
@@ -53,6 +58,17 @@ Therefore the appropriate way to access it is::
  'jLAwwQPbcbdfghgiihhjqgxarxr']
 
 Furthermore, the peripheral information in the census below 10-tetrahedra was not stored.
+
+The iterator for all manifolds in this module is :code:`snappy.TenTetCuspedCensus`. For example::
+  sage: for M in snappy.TenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
+  o10_150721(0,0)(0,0)(0,0) 10.1494160640965
+  o10_150722(0,0)(0,0)(0,0) 10.1494160640965
+  o10_150723(0,0)(0,0) 10.1494160640965
+
+  sage: for M in snappy.TenTetCuspedCensus(num_cusps=2)[-3:]: print(M, M.volume(), M.num_cusps())
+  o10_150719(0,0)(0,0) 10.1494160640965 2
+  o10_150723(0,0)(0,0) 10.1494160640965 2
+  o10_150726(0,0)(0,0) 10.1494160640965 2
 
 The raw source for the tables are in::
   
