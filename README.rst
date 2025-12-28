@@ -7,7 +7,7 @@ accompanying the paper
 
   Shana Yunsheng Li, The complete 10-tetrahedra census of orientable cusped hyperbolic 3-manifolds `arXiv:2512.02142
   <https://arxiv.org/abs/2512.02142>`_
-  
+
 and includes the source code for the Python module
 :code:`snappy_10_tets` which packages them up for use in SnapPy.
 
@@ -60,6 +60,7 @@ Therefore the appropriate way to access it is::
 Furthermore, the peripheral information in the census below 10-tetrahedra was not stored.
 
 The iterator for all manifolds in this module is :code:`snappy.TenTetCuspedCensus`. For example::
+  
   sage: for M in snappy.TenTetCuspedCensus[-9:-6]: print(M, M.volume()) 
   o10_150721(0,0)(0,0)(0,0) 10.1494160640965
   o10_150722(0,0)(0,0)(0,0) 10.1494160640965
