@@ -1,7 +1,7 @@
 The database for 10-tetrahedra census of orientable cusped hyperbolic 3-manifolds
 ============================
 
-  HEADSUP: The data in this repository has been merged into `snappy_manifolds<https://github.com/3-manifolds/snappy_manifolds>`_ version 1.4,
+  HEADSUP: The data in this repository has been merged into `snappy_manifolds <https://github.com/3-manifolds/snappy_manifolds>`_ version 1.4,
   which automatically comes with SnapPy 3.3. Hence there is no need to install this module for anyone with SnapPy>=3.3. 
 
 This repository stores the manifold database of a complete census of
