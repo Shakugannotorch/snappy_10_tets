@@ -32,7 +32,7 @@ For example::
 For the 10-tetrahedra census, this module also stores all minimal triangulations of a given manifold,
 which can be accessed by, for example::
 
-  sage: m = snappy.Manifold('o10_140311')
+  sage: m = snappy.TenTetCuspedCensus['o10_140311']
   sage: m.isometry_class
   ['kLLLALQkccfgehhijjjlnhqadatjno',
  'kLLLLQPkbcghgfhijjjtsmssoswqhq',
@@ -49,18 +49,7 @@ which can be accessed by, for example::
  'kvLLAMQkdfgehhijijjnlxnxgjnngn',
  'kvLLAAQkcgfhhfjijijkqeatqbgroc']
 
-For census below 10-tetrahedra, :code:`m.isometry_class` has been extracted from the `Regina database <https://regina-normal.github.io/data.html>`_ , 
-but is not perfectly compatible with SnapPy as of current, in the sense that one needs to create the manifold with :code:`snappy.TenTetCuspedCensus` instead of :code:`snappy.Manifold`, 
-otherwise an error will be raised when one tries to access :code:`m.isometry_class`. 
-Therefore the appropriate way to access it is::
-
-  sage: m = snappy.TenTetCuspedCensus['o9_08594']
-  sage: m.isometry_class
-  ['jLALLAQcbbfgfhiiihhkltxkqdm',
- 'jLALzMQbcbefgihhixxjnlotrsk',
- 'jLAwwQPbcbdfghgiihhjqgxarxr']
-
-Furthermore, the peripheral information in the census below 10-tetrahedra was not stored.
+For census below 10-tetrahedra, :code:`m.isometry_class` was extracted from the `Regina database <https://regina-normal.github.io/data.html>`_ .
 
 The iterator for all manifolds in this module is :code:`snappy.TenTetCuspedCensus`. For example::
   
